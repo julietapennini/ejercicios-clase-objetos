@@ -8,7 +8,7 @@ const datos = {
     telefono: "1234567890",
     edad: "29",
     programa: true,
-  };
+};
 
 // Solución
 datos.telefono = "0192837465"
@@ -25,17 +25,17 @@ const user = {
     name: "Ada Lovelace",
     url: "https://www.linkedin.com/in/ada-lovelace",
     skills: ["HTML", "CSS", "SASS"],
-  };
+};
   
-  // Solución
-  user.skills.push ("Javascript");
+// Solución
+user.skills.push ("Javascript");
   
-  console.log(user);
-  // deberia mostrar
-  // { id: 123456789,
-  //   name: 'Ada Lovelace',
-  //   url: 'https://www.linkedin.com/in/ada-lovelace',
-  //   skills: [ 'HTML', 'CSS', 'SASS', 'Javascript' ] }
+console.log(user);
+// deberia mostrar
+// { id: 123456789,
+//   name: 'Ada Lovelace',
+//   url: 'https://www.linkedin.com/in/ada-lovelace',
+//   skills: [ 'HTML', 'CSS', 'SASS', 'Javascript' ] }
 
 
 
@@ -73,24 +73,51 @@ const ganadoras = [
       temporada: "6",
       foto: "http://www.nokeynoshade.party/images/bianca-del-rio.jpg",
     },
-  ];
+];
 
- // Solución
+// Solución
   for(let i = 0; i < ganadoras.length; i++){
     console.log(`${ganadoras[i].nombre} ganó la temporada ${ganadoras[i].temporada}`);
-  }
+}
   
   
-  ///// RESULTADO
-  // Bebe Zahara Benet ganó la temporada 1
-  // Tyra Sanchez ganó la temporada 2
-  // Raja ganó la temporada 3
-  // Sharon Needles ganó la temporada 4
-  // Jinkx Monsoon ganó la temporada 5
-  // Bianca Del Rio ganó la temporada 6
+///// RESULTADO
+// Bebe Zahara Benet ganó la temporada 1
+// Tyra Sanchez ganó la temporada 2
+// Raja ganó la temporada 3
+// Sharon Needles ganó la temporada 4
+// Jinkx Monsoon ganó la temporada 5
+// Bianca Del Rio ganó la temporada 6
+
+
+//___________Ejercicio 11
+
+const bandas = [
+    { id: 1, nombre: "Nirvana", fundacion: 1987, activa: false },
+    { id: 2, nombre: "Foo Fighters", fundacion: 1994, activa: true },
+    { id: 3, nombre: "Led Zeppelin", fundacion: 1967, activa: false },
+    { id: 3, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
+    { id: 3, nombre: "Pearl Jam", fundacion: 1990, activa: true },
+];
+  
+// Solución
+
+for (let i = 0; i < bandas.length; i++) {
+    const {id, nombre, fundacion, activa} = bandas[i];
+    if(activa === true){
+        console.log(`${nombre} está activa desde el año ${fundacion}`)
+    }else{
+        console.log(`${nombre} NO está activa`)
+    }   
+}
 
 
 
+// Nirvana no está activa
+// Foo Fighters está activa desde el año 1994
+// Led Zeppelin no está activa
+ // Queens of the Stone Age está activa desde el año 1997
+// Pearl Jam está activa desde el año 1990
 
 
 //___________Ejercicio 12
@@ -130,63 +157,61 @@ const banda = {
         duration: 2559,
       },
     ],
-  };
+};
   
 
-  // Solución
+// Solución
 
-  const anioLanzamiento = banda.year;
-  const cantidadMiembros = banda.members.length;
-  //metodo de arrays para tomar todos los elementos del Array convertilos en un string largo pomiendo en el medio lo que pongamos en el parámetro
-  const miembros = banda.members.join(", ");
-  const cantidadDiscos = banda.albums.length
-  /*1 - Entrar al objeto banda
-    2- Entrar a la propiedad albumns
-    3 - Recorrer el Array dentro de albums
-    4 - Leer length de propiedad songs de cada elemento del Arrayal albumns
-    5 - Sumar todas los elementos del arrrayal song dentro del arrayal albuumns*/
+const anioLanzamiento = banda.year;
+const cantidadMiembros = banda.members.length;
+//metodo de arrays para tomar todos los elementos del Array convertilos en un string largo pomiendo en el medio lo que pongamos en el parámetro
+const miembros = banda.members.join(", ");
+const cantidadDiscos = banda.albums.length
+/*1 - Entrar al objeto banda
+2- Entrar a la propiedad albumns
+3 - Recorrer el Array dentro de albums
+4 - Leer length de propiedad songs de cada elemento del Arrayal albumns
+5 - Sumar todas los elementos del arrrayal song dentro del arrayal albuumns*/
     
 
-    const buscarTotalCanciones = () => {
-        let total = 0;
-        for (let i = 0; i < banda.albums.length; i++) {
-            total += banda.albums[i].songs.length;
-        }
-        return total;
+const buscarTotalCanciones = () => {
+    let total = 0;
+    for (let i = 0; i < banda.albums.length; i++) {
+        total += banda.albums[i].songs.length;
     }
+    return total;
+}
     
    const cantidadTotalCanciones = buscarTotalCanciones()
     
-   /*1 - Entrar al objeto banda
-    2- Entrar a la propiedad albumns
-    3 - Recorrer el Array dentro de albums
-    4 - Leer length de propiedad songs de cada elemento del Arrayal albumns
-    5 - Sumar todas los elementos de duracion dentro del arrayal albuumns
-    6 - dividir el total por la cantidad de canciones*/
+/*1 - Entrar al objeto banda
+2- Entrar a la propiedad albumns
+3 - Recorrer el Array dentro de albums
+4 - Leer length de propiedad songs de cada elemento del Arrayal albumns
+5 - Sumar todas los elementos de duracion dentro del arrayal albuumns
+6 - dividir el total por la cantidad de canciones*/
     
-   const buscarTotalDuracion = () => {
-    let total = 0;
-    for (let i = 0; i < banda.albums.length; i++) {
+const buscarTotalDuracion = () => {
+ let total = 0;
+for (let i = 0; i < banda.albums.length; i++) {
         total += banda.albums[i].duration;
-    }
-    return total / cantidadTotalCanciones;
+}
+return total / cantidadTotalCanciones;
 }
 
-    const promedioDuracion = buscarTotalDuracion()
+const promedioDuracion = buscarTotalDuracion()
 
   
-  ///// RESULTADO
-  console.log("Led Zeppelin se fundó en el año " + anioLanzamiento);
+///// RESULTADO
+console.log("Led Zeppelin se fundó en el año " + anioLanzamiento);
   
-  console.log("Tiene " + cantidadMiembros + " miembros: " + miembros);
+console.log("Tiene " + cantidadMiembros + " miembros: " + miembros);
   
-  console.log("Tiene en total " + cantidadDiscos + " discos");
+console.log("Tiene en total " + cantidadDiscos + " discos");
   
-  console.log(
-    "Tiene en total " +
-      cantidadTotalCanciones +
-      " canciones entre todos los discos."
-  );
+console.log(
+    "Tiene en total " + cantidadTotalCanciones +" canciones entre todos los discos."
+);
   
   console.log("En promedio, cada canción dura " + promedioDuracion + " segundos");
   // ESPERADO
