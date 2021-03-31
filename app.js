@@ -1,6 +1,6 @@
-/*___________Ejercicio 4
+//___________Ejercicio 4
 
-var datos = {
+const datos = {
     id: 1,
     nombre: "Ada",
     apellido: "Lovelace",
@@ -10,25 +10,26 @@ var datos = {
     programa: true,
   };
 
-  
+// Solución
 datos.telefono = "0192837465"
 datos.edad = 29;
 
 console.log(datos)
 
 
+
+
 //___________Ejercicio 8
-var user = {
+const user = {
     id: 123456789,
     name: "Ada Lovelace",
     url: "https://www.linkedin.com/in/ada-lovelace",
     skills: ["HTML", "CSS", "SASS"],
   };
   
-  
+  // Solución
   user.skills.push ("Javascript");
   
-  // despues de la solucion
   console.log(user);
   // deberia mostrar
   // { id: 123456789,
@@ -39,9 +40,62 @@ var user = {
 
 
 
+
+//___________Ejercicio 10
+const ganadoras = [
+    {
+      nombre: "Bebe Zahara Benet",
+      temporada: "1",
+      foto: "http://www.nokeynoshade.party/images/bebe-zahara-benet.jpg",
+    },
+    {
+      nombre: "Tyra Sanchez",
+      temporada: "2",
+      foto: "http://www.nokeynoshade.party/images/tyra-sanchez.jpg",
+    },
+    {
+      nombre: "Raja",
+      temporada: "3",
+      foto: "http://www.nokeynoshade.party/images/raja.jpg",
+    },
+    {
+      nombre: "Sharon Needles",
+      temporada: "4",
+      foto: "http://www.nokeynoshade.party/images/sharon-needles.jpg",
+    },
+    {
+      nombre: "Jinkx Monsoon",
+      temporada: "5",
+      foto: "http://www.nokeynoshade.party/images/jinkx-monsoon.jpg",
+    },
+    {
+      nombre: "Bianca Del Rio",
+      temporada: "6",
+      foto: "http://www.nokeynoshade.party/images/bianca-del-rio.jpg",
+    },
+  ];
+
+ // Solución
+  for(let i = 0; i < ganadoras.length; i++){
+    console.log(`${ganadoras[i].nombre} ganó la temporada ${ganadoras[i].temporada}`);
+  }
+  
+  
+  ///// RESULTADO
+  // Bebe Zahara Benet ganó la temporada 1
+  // Tyra Sanchez ganó la temporada 2
+  // Raja ganó la temporada 3
+  // Sharon Needles ganó la temporada 4
+  // Jinkx Monsoon ganó la temporada 5
+  // Bianca Del Rio ganó la temporada 6
+
+
+
+
+
 //___________Ejercicio 12
 
-var banda = {
+const banda = {
     name: "Led Zeppelin",
     year: 1968,
     active: false,
@@ -78,6 +132,9 @@ var banda = {
     ],
   };
   
+
+  // Solución
+
   const anioLanzamiento = banda.year;
   const cantidadMiembros = banda.members.length;
   //metodo de arrays para tomar todos los elementos del Array convertilos en un string largo pomiendo en el medio lo que pongamos en el parámetro
@@ -87,7 +144,7 @@ var banda = {
     2- Entrar a la propiedad albumns
     3 - Recorrer el Array dentro de albums
     4 - Leer length de propiedad songs de cada elemento del Arrayal albumns
-    5 - Sumar todas los elementos del arrrayal song dentro del arrayal albuumns
+    5 - Sumar todas los elementos del arrrayal song dentro del arrayal albuumns*/
     
 
     const buscarTotalCanciones = () => {
@@ -100,12 +157,12 @@ var banda = {
     
    const cantidadTotalCanciones = buscarTotalCanciones()
     
-/*1 - Entrar al objeto banda
+   /*1 - Entrar al objeto banda
     2- Entrar a la propiedad albumns
     3 - Recorrer el Array dentro de albums
     4 - Leer length de propiedad songs de cada elemento del Arrayal albumns
     5 - Sumar todas los elementos de duracion dentro del arrayal albuumns
-    6 - dividir el total por la cantidad de canciones
+    6 - dividir el total por la cantidad de canciones*/
     
    const buscarTotalDuracion = () => {
     let total = 0;
@@ -115,10 +172,8 @@ var banda = {
     return total / cantidadTotalCanciones;
 }
 
-const promedioDuracion = buscarTotalDuracion()
+    const promedioDuracion = buscarTotalDuracion()
 
-  
-  // completa el codigo para lograr el resultado esperado
   
   ///// RESULTADO
   console.log("Led Zeppelin se fundó en el año " + anioLanzamiento);
@@ -140,4 +195,3 @@ const promedioDuracion = buscarTotalDuracion()
   // Tiene en total 4 discos
   // Tiene en total 9 canciones entre todos los discos.
   // En promedio, cada canción dura 1137.888888888889 segundos
-*/
