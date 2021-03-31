@@ -182,7 +182,7 @@ const buscarTotalCanciones = () => {
     return total;
 }
     
-   const cantidadTotalCanciones = buscarTotalCanciones()
+const cantidadTotalCanciones = buscarTotalCanciones()
     
 /*1 - Entrar al objeto banda
 2- Entrar a la propiedad albumns
